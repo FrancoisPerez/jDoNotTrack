@@ -3,7 +3,7 @@
 
 An educational jQuery plugin for "Do Not Track" setting
 
-<p align="center"><img src="img/jDoNotTrack.png"></p>
+<p align="center"><img src="https://raw.github.com/FrancoisPerez/jDoNotTrack/master/img/jDoNotTrack.png"></p>
 
 This plugin detects if a user is using the "Do Not Track" header and inform him about its dangers.
 
