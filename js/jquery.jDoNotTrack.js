@@ -57,9 +57,9 @@
 		
 		detectDNT();
 		
-		//if(dntEnabled){
+		if(dntEnabled){
 			createAlert();
-		//}
+		}
 	}
 	
 	function createAlert() {
@@ -88,7 +88,6 @@
 			},
 			text:'[x]'
 		})
-		console.log(close)
 		var div = $('<p/>', {
 			css: {
 				'height': $.doNotTrack.options.height + 'px',
