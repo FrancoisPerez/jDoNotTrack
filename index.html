@@ -1,81 +1,84 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>Jdonottrack by FrancoisPerez</title>
-  </head>
+﻿<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="jQuery Plugin to inform people about Do Not Track settings of their browser" />
+  <meta name="author" content="François Pérez" />
+  <title>jDoNotTrack - An educational jQuery plugin for "Do Not Track" setting</title>
+  <link href="css/style.css" rel="stylesheet" media="screen" />
+  <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+  
+  <script type="text/javascript" src="http://donottrack.us/js/dnt.php"></script>
+  <script type="text/javascript" src="js/jquery.jDoNotTrack.js"></script>
+  <script type="text/javascript" src="js/locales/jquery.jDoNotTrack.en.js"></script>
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 
-  <body>
-    <div id="container">
-      <div class="inner">
+</head>
+<body>
+		<h1>jDoNotTrack</h1>
+		<p>An educational jQuery plugin for "Do Not Track" setting</p>
+		
+		<p align="center"><img src="img/jDoNotTrack.png"></p>
+		<p>This plugin detects if a user is using the "Do Not Track" header and inform him about its dangers.</p>
+		
+		<h2>Documentation</h2>
+		
+		<h3>Basic Usage</h3>
+		<pre><code>
+$(document).ready(function() {
+	$('body').doNotTrack();
+});
+		</code></pre>
+		
+		<h3>Options</h3>
+		<pre><code>
+options: {
+	zindex: '99999', // z-index parameter for the box
+	height: '70', // height of the alert box
+	id: 'doNotTrackAlert', // id of the alert box
+	idCloseButton: 'doNotTrackCloseButton', // id of the [x] link
+	animSpeed:1000, // Speed of open/close animation
+	autoHide: false, // Choose whether you want to auto-close the box or want the user to click on the [x] link
+	timeBeforeHide:10000, // If autoHide = true, time to wait before the box closes
+}
+		</code></pre>
+	
+	<h3>Browser Support</h3>
+	
+	<p>Piecon has been tested to work completely in the following browsers (older versions may be supported, but haven't been tested):</p>
+		<ul>
+			<li>Chrome 15+</li>
+			<li>Firefox 9+</li>
+			<li>Opera 11+</li>
+		</ul>
 
-        <header>
-          <h1>Jdonottrack</h1>
-          <h2>An educational jQuery plugin for &quot;Do Not Track&quot; setting</h2>
-        </header>
+	<h2>License</h2>
+	<p>Licensed under the <a href="http://en.wikipedia.org/wiki/MIT_License">MIT license</a>.</p>
+	<h2>Credits</h2>
+	<p>jDoNotTrack was inspired by the fact that Microsoft decided to activate opt-out by default in their browser while, IMNSHO, it should reflect the direct choice of the user.</p>
+	<p>If you like my work, please <a href="http://www.twitter.com/FrancoisPerez" alt="François Pérez - Twitter account" title="François Pérez - Twitter account">follow me</a> ... or donate (even 0.01€, that always nice !) 
+		
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHTwYJKoZIhvcNAQcEoIIHQDCCBzwCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYClyXxn/1w7WSv01jaGPXMw53Wro3WRvZcMQlYNMmJnPh/mHP0wKZxUni1wYr5YI2gM/8uByqIBNLeoYD3KhYXwXikzh7REzFS2Cb6pfSs+duxnzkgpB/K6d3YkMDQsss3xXhVp/27rxl3x2+//TBlXb0WH6XmWa51ZVYahf87QhTELMAkGBSsOAwIaBQAwgcwGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQI+W9mq3KqdP6Agag/H1k1qsAkc+rWvqOWgGJuTPHIDM5kFDinllexbE52aMnWQyJBMQB2fMLd8b96x+1rTzYhmQJhL/7rpqOyJxJzrq4BG8ZAYThWXOUKNvgMWBZqhhZt9EligZdNPjehcQ3tiEIYqekzLHtSjDVp48CIdUdATCRAPyCyB8oqTEnaJxvPUUPv/roSE0+bl0B2XxKcKMizPUYd5D1fq6dlk8HLHRWz0T5ja5SgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMjA4MDgxNTU2MzBaMCMGCSqGSIb3DQEJBDEWBBQtiQp9tLDlwe2qej/kuAFa0aKPSDANBgkqhkiG9w0BAQEFAASBgK3hcx4gAyHoORszeOhXjIAtCVBvYNzkk+9tpwVpnPjj2quMM/iIZRGxm37cQYNsUYb70fENWj9RGu82+We8rpOYL/7MOmV3nUXsg7i8//fWDsbqBGR8sxq7g/hxZZya0hMqE6tXujj3i8mAcbPsXFlGNRBM53QJi8kqRMfnHzjI-----END PKCS7-----
+			">
+			<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+			<img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+		</form>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/FrancoisPerez/jDoNotTrack/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/FrancoisPerez/jDoNotTrack/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/FrancoisPerez/jDoNotTrack" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
-
-        <hr>
-
-        <section id="main_content">
-          <h3>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-        </section>
-
-        <footer>
-          Jdonottrack is maintained by <a href="https://github.com/FrancoisPerez">FrancoisPerez</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-                  <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-33969387-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
-
-      </div>
-    </div>
-  </body>
+</p>
+	<p>Design taken from <a href="https://github.com/lipka">@lipka</a> because I really loved it (go check his Github page, he has some amazing stuff ;) ).</p>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('body').doNotTrack();
+		});
+	</script>
+</body>
 </html>
