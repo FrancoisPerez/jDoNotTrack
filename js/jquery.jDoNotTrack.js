@@ -96,7 +96,7 @@
 				'color': '#FFF',
 				'text-align':'center',
 				'font-family':'Arial, Helvetica, sans-serif',
-				'font-size' : '1.2em',
+				'font-size' : '12px',
 				'display': 'table-cell',
 				'vertical-align': 'middle',
 			},
