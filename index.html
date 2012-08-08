@@ -51,7 +51,7 @@ options: {
 	
 	<h3>Browser Support</h3>
 	
-	<p>Piecon has been tested to work completely in the following browsers (older versions may be supported, but haven't been tested):</p>
+	<p>jDoNotTrack has been tested to work completely in the following browsers (older versions may be supported, but haven't been tested):</p>
 		<ul>
 			<li>Chrome 15+</li>
 			<li>Firefox 9+</li>
@@ -79,6 +79,20 @@ options: {
 		$(document).ready(function() {
 			$('body').doNotTrack();
 		});
+	</script>
+	
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-33969387-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
 	</script>
 </body>
 </html>
