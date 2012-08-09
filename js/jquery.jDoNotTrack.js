@@ -2,14 +2,14 @@
  * jQuery Do Not Track (DNT) plugin
  * Educational jQuery Plugin for Do Not Track setting
  * Copyright (c) 2012 F. Pérez (@FrancoisPerez)
- * Version: 1.0.0 (8-AUG-2012)
+ * Version: 1.0.1 (8-AUG-2012)
  * Dual licensed under the MIT and GPL licenses.
  * Requires: jQuery v1.3.2 or later
  */
 ;(function($, undefined){
 	'use strict';
 	
-	var ver = '1.0.0';
+	var ver = '1.0.1';
 	var dntEnabled = false;
 	
 	function log() {
@@ -31,17 +31,18 @@
 		}
 	}
 			
-	
+	// Default options
 	$.doNotTrack = {
 		options: {
-			zindex: '99999',
-			height: '70',
-			id: 'doNotTrackAlert',
-			idCloseButton: 'doNotTrackCloseButton',
-			autoHide: false,
+			zindex:'99999',
+			height:'70',
+			id:'doNotTrackAlert',
+			idCloseButton:'doNotTrackCloseButton',
+			autoHide:true,
 			timeBeforeShow: 0,
 			animSpeed:1000,
 			timeBeforeHide:10000,
+			opacity:0.75
 		},
 		elements: []
 	};
@@ -49,11 +50,20 @@
 	$.fn.doNotTrack = function(options) {
 		options = $.extend($.doNotTrack.options, options);
 		
+  
 		detectDNT();
 		
-		if(dntEnabled){
+		//if(dntEnabled){
+			
+			// Checks if opacity css is supported
+			if($.browser.msie && $.browser.version < 7){
+				$.support.selectOpacity = false;
+			}else{
+				$.support.selectOpacity = true;
+			}
+			
 			createAlert();
-		}
+		//}
 	}
 	
 	function createAlert() {
@@ -82,7 +92,7 @@
 			},
 			text:'[x]'
 		})
-		console.log(close)
+
 		var div = $('<p/>', {
 			css: {
 				'height': $.doNotTrack.options.height + 'px',
@@ -108,7 +118,11 @@
 				'height': $.doNotTrack.options.height + 'px',
 				'background-color':	'#000',
 				'display':'none',
-				'z-index': $.doNotTrack.options.zindex
+				'z-index': $.doNotTrack.options.zindex,
+				'opacity': function(){
+					if($.support.selectOpacity)	return $.doNotTrack.options.opacity;
+					else return '1';
+				}
 			},
 			html: div
 		})
