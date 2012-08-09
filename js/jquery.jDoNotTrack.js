@@ -42,7 +42,8 @@
 			timeBeforeShow: 0,
 			animSpeed:1000,
 			timeBeforeHide:10000,
-			opacity:0.75
+			opacity:0.75,
+			backgroundColor:"#000",
 		},
 		elements: []
 	};
@@ -73,16 +74,17 @@
 
 		var close = $('<a/>',{
 			href : '#',
-			alt : $.doNotTrack.options.lang['closeAlert'],
-			title: $.doNotTrack.options.lang['closeAlert'],
+			alt : $.doNotTrack.options.layout['closeAlert'],
+			title: $.doNotTrack.options.layout['closeAlert'],
 			id: $.doNotTrack.options.idCloseButton,
 			css : {
 				'position':'absolute',
-				'left':'95%',
-				'top': ($.doNotTrack.options.height/2) -15,
+				'right':'1%',
+				'top': ($.doNotTrack.options.height/2) -15 + 'px',
 				'cursor':'pointer',
 				'color':'#FFF',
 				'text-decoration':'none',
+				'font': 'normal bold 14px Arial,Helvetica,sans-serif',
 			},
 			click: function(){
 				$('#' + $.doNotTrack.options.id).animate({
@@ -99,8 +101,7 @@
 				'width': '1%',
 				'color': '#FFF',
 				'text-align':'center',
-				'font-family':'Arial, Helvetica, sans-serif',
-				'font-size' : '12px',
+				'font': ' normal 12px Arial,Helvetica,sans-serif',
 				'display': 'table-cell',
 				'vertical-align': 'middle',
 			},
@@ -116,7 +117,7 @@
 				'left':0,
 				'width': '100%',
 				'height': $.doNotTrack.options.height + 'px',
-				'background-color':	'#000',
+				'background-color':	$.doNotTrack.options.backgroundColor,
 				'display':'none',
 				'z-index': $.doNotTrack.options.zindex,
 				'opacity': function(){
