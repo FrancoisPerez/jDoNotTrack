@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="jQuery Plugin to inform people about Do Not Track settings of their browser" />
+  <meta name="author" content="François Pérez" />
+  <title>Do Not Track - Choose whether you want it or not !</title>
+  <link href="css/style.css" rel="stylesheet" media="screen" />
+  <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+  
+  <script type="text/javascript" src="http://donottrack.us/js/dnt.php"></script>
+  <script type="text/javascript" src="js/jquery.jDoNotTrack.js"></script>
+  <script type="text/javascript" src="js/locales/jquery.jDoNotTrack.en.js"></script>
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+<h1>"Do Not Track" : A good idea ?</h1>
+	
+	<p>On Wednesday 9th of August 2012, Microsoft decided to ignore the criticisms made by the industry and to enable the "Do Not Track" headers by default in their IE 10 browser.<br /><strong>We believe Microsoft made a wrong choice as this option should reflect a choice of the user about his willing not to be tracked.</strong></p>
+	
+	<h2>A bit of History <small>(from Wikipedia)</small></h2>
+	
+	<p>In 2007, several consumer advocacy groups asked the Federal Trade Commission to create a Do Not Track list for online advertising. The proposal would have required that online advertisers submit their information to the FTC, which would compile a machine-readable list of the domain names used by those companies to place cookies or otherwise track consumers.</p>
+	<p>In July 2009, researchers Christopher Soghoian and Sid Stamm created a prototype add-on for the Firefox web browser, implementing support for the Do Not Track header. Stamm was, at the time, a privacy engineer at Mozilla, while Soghoian soon afterward started working at the FTC. One year later, during a U.S. Senate privacy hearing, FTC Chairman Jon Leibowitz told the Senate Commerce Committee that the commission was exploring the idea of proposing a "do-not-track" list.</p>
+	<p>In December 2010, the FTC issued a privacy report that called for a "do not track" system that would enable people to avoid having their actions monitored online. One week later, Microsoft announced that its next browser would include support for Tracking Protection Lists, that block tracking of consumers using blacklists supplied by third parties. In January 2011, Mozilla announced that its Firefox browser would soon provide a Do Not Track solution, via a browser header. Microsoft's Internet Explorer, Apple's Safari and Opera all later added support for the header approach. Google Chrome supports Do not track by its official extensions. In June 2012, Microsoft announced that Do no track would be activated by default in Internet Explorer 10.</p>
+	
+	<h2>How does it work ?<small>(still Wikipedia)</small></h2>
+	<p>When a web browser requests content or sends data using HTTP, it can include extra information optionally in one or more items called "headers". Do not track adds a header (DNT: 1), indicating that the user does not wish to be tracked.The execution of this non-tracking directive can only be implemented on the part of the HTTP server, so its enforcement is applied effectively using the honor system. In this regard, do not track is similar to the Robots Exclusion standard, which provides a mechanism for HTTP servers to communicate to automatic web-traversing client programs whether those programs are granted permission to access the servers, but entirely relies upon honor and etiquette on the part of the client for compliance.</p>
+	
+	<h2>Will I stop seeing ads ?<small>(from Mozilla)</small></h2>
+	
+	<p>No, you will still see ads with Do Not Track enabled. However, Do Not Track may change the type of ads you see. For example, behavioral ads are targeted to your interests based on the websites you visit and the search terms you use. If you request that websites Do Not Track you, and the sites respect your privacy preferences, you will see more generic ads in place of behavioral ads.</p>
+	
+	
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-33969387-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+</body>
+</html>
