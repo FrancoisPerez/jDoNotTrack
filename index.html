@@ -24,12 +24,20 @@
 		<h1>jDoNotTrack</h1>
 		<p>An educational jQuery plugin for "Do Not Track" setting</p>
 		
-		<p align="center"><img src="img/jDoNotTrack.png"></p>
+		<p align="center"><img src="https://raw.github.com/FrancoisPerez/jDoNotTrack/master/img/jDoNotTrack.png"></p>
 		<p>This plugin detects if a user is using the "Do Not Track" header and inform him about its dangers.</p>
 		
 		<h2>Documentation</h2>
 		
 		<h3>Basic Usage</h3>
+		<h4>Import</h4>
+		<pre><code>
+			<script type="text/javascript" src="http://donottrack.us/js/dnt.php"></script>
+			<script type="text/javascript" src="js/jquery.jDoNotTrack.js"></script>
+			<script type="text/javascript" src="js/locales/jquery.jDoNotTrack.en.js"></script>
+		</code></pre>
+		
+		<h4>Call</h4>
 		<pre><code>
 $(document).ready(function() {
 	$('body').doNotTrack();

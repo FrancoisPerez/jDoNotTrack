@@ -11,14 +11,14 @@ This plugin detects if a user is using the "Do Not Track" header and inform him 
 
 ### Basic usage
 
-### Import
+#### Import
 ```javascript
   <script type="text/javascript" src="http://donottrack.us/js/dnt.php"></script>
   <script type="text/javascript" src="js/jquery.jDoNotTrack.js"></script>
   <script type="text/javascript" src="js/locales/jquery.jDoNotTrack.en.js"></script>
 ```
 
-### Call
+#### Call
 
 ```javascript
 $(document).ready(function() {
@@ -57,6 +57,6 @@ Licensed under the [MIT license](http://en.wikipedia.org/wiki/MIT_License).
 
 DoNotTrack was inspired by the fact that Microsoft decided to activate opt-out by default in their browser while, IMNSHO, it should reflect the direct choice of the user.
 
-If you like my work, please follow me ( [@FrancoisPerez](http://www.twitter.com/FrancoisPerez) ) ... or donate (even 0.01€, that always nice !)
+If you like my work, please follow me ( [@FrancoisPerez](http://www.twitter.com/FrancoisPerez) ) ... or donate (even 0.01ï¿½, that always nice !)
 
 Design taken from [@lipka](https://github.com/lipka) because I really loved it (go check his Github page, he has some amazing stuff ;) ).
