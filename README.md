@@ -11,6 +11,15 @@ This plugin detects if a user is using the "Do Not Track" header and inform him 
 
 ### Basic usage
 
+### Import
+```javascript
+  <script type="text/javascript" src="http://donottrack.us/js/dnt.php"></script>
+  <script type="text/javascript" src="js/jquery.jDoNotTrack.js"></script>
+  <script type="text/javascript" src="js/locales/jquery.jDoNotTrack.en.js"></script>
+```
+
+### Call
+
 ```javascript
 $(document).ready(function() {
 	$('body').doNotTrack();
@@ -28,6 +37,8 @@ options: {
 	animSpeed:1000, // Speed of open/close animation
 	autoHide: false, // Choose whether you want to auto-close the box or want the user to click on the [x] link
 	timeBeforeHide:10000, // If autoHide = true, time to wait before the box closes
+	opacity:0.75, // Opacity of the box
+	backgroundColor:"#000", // Background color of the box
 }
 ```
 ### Browser Support
