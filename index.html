@@ -24,12 +24,20 @@
 		<h1>jDoNotTrack</h1>
 		<p>An educational jQuery plugin for "Do Not Track" setting</p>
 		
-		<p align="center"><img src="img/jDoNotTrack.png"></p>
+		<p align="center"><img src="https://raw.github.com/FrancoisPerez/jDoNotTrack/master/img/jDoNotTrack.png"></p>
 		<p>This plugin detects if a user is using the "Do Not Track" header and inform him about its dangers.</p>
 		
 		<h2>Documentation</h2>
 		
 		<h3>Basic Usage</h3>
+		<h4>Import</h4>
+		<pre><code>
+&lt;script type="text/javascript" src="js/dnt.php"></script>
+&lt;script type="text/javascript" src="js/jquery.jDoNotTrack.js"></script>
+&lt;script type="text/javascript" src="js/locales/jquery.jDoNotTrack.en.js"></script>
+		</code></pre>
+		
+		<h4>Call</h4>
 		<pre><code>
 $(document).ready(function() {
 	$('body').doNotTrack();
@@ -46,8 +54,6 @@ options: {
 	animSpeed:1000, // Speed of open/close animation
 	autoHide: false, // Choose whether you want to auto-close the box or want the user to click on the [x] link
 	timeBeforeHide:10000, // If autoHide = true, time to wait before the box closes
-	opacity:0.75, // Opacity of the box
-	backgroundColor:"#000", // Background color of the box
 }
 		</code></pre>
 	
