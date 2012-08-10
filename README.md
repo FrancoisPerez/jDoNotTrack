@@ -9,6 +9,8 @@ This plugin detects if a user is using the "Do Not Track" header and inform him 
 
 ## Documentation
 
+[Click here for live demo](http://francoisperez.github.com/jDoNotTrack/) (don't forget to enable DNT on your browser to see it work !)
+
 ### Basic usage
 
 #### Import
@@ -58,6 +60,6 @@ Licensed under the [MIT license](http://en.wikipedia.org/wiki/MIT_License).
 
 DoNotTrack was inspired by the fact that Microsoft decided to activate opt-out by default in their browser while, IMNSHO, it should reflect the direct choice of the user.
 
-If you like my work, please follow me ( [@FrancoisPerez](http://www.twitter.com/FrancoisPerez) ) ... or donate (even 0.01�, that always nice !)
+If you like my work, please follow me ( [@FrancoisPerez](http://www.twitter.com/FrancoisPerez) ) ... or donate on the demo page (even 0.01�, that always nice !)
 
 Design taken from [@lipka](https://github.com/lipka) because I really loved it (go check his Github page, he has some amazing stuff ;) ).
