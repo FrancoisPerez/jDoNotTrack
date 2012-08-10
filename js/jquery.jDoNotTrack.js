@@ -54,7 +54,7 @@
   
 		detectDNT();
 		
-		//if(dntEnabled){
+		if(dntEnabled){
 			
 			// Checks if opacity css is supported
 			if($.browser.msie && $.browser.version < 7){
@@ -64,7 +64,7 @@
 			}
 			
 			createAlert();
-		//}
+		}
 	}
 	
 	function createAlert() {
