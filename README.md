@@ -58,7 +58,7 @@ Licensed under the [MIT license](http://en.wikipedia.org/wiki/MIT_License).
 
 ## Credits
 
-DoNotTrack was inspired by the fact that Microsoft decided to activate opt-out by default in their browser while, IMNSHO, it should reflect the direct choice of the user.
+DoNotTrack was inspired by the fact that Microsoft decided to activate opt-out by default in their browser while, IMNSHO, it should reflect the explicit choice of the user.
 
 If you like my work, please follow me ( [@FrancoisPerez](http://www.twitter.com/FrancoisPerez) ) ... or donate on the demo page (even 0.01�, that always nice !)
 
