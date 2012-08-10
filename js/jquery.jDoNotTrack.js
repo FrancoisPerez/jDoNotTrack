@@ -68,7 +68,7 @@
 	}
 	
 	function createAlert() {
-		var count = -1;
+		var count = 0;
 		for (var k in $.doNotTrack.options.lang) ++count; // Count the number of occurences there is in the lang file
 		if(count == 0) alert('[jDoNotTrack] Error : Language file not loaded !');
 
