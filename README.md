@@ -48,6 +48,7 @@ jDoNotTrack has been tested to work completely in the following browsers (older 
 * Chrome 15+
 * Firefox 9+
 * Opera 11+
+* Internet Explorer 6+
 
 ## License
 
